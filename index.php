@@ -27,10 +27,6 @@
             <input type="button" value="submit"><br><br>
         </form>
         <img src="https://cdn.discordapp.com/attachments/702099227706392629/706835456054263808/Z.png">
-        <form method="post">
-            <label>Please enter your Name:</label><input type="text" name="Name"  value=''/>Name<br><br>
-            <input name="submit" type="submit" value="Submit"><br><br>
-    </form>
     <?php
     function onSubmit() {
         $firstname = $_POST["fname"];
