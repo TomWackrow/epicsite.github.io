@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <head>
+        <h1 class="title">Epic Site</h1>
+        <form name="form" method="post" onsubmit="onSubmit()">
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="credit-card">Credit Card:</label>
+            <input type="credit-card" name="creditcard"><br>
+            <label for="security-code">Security Code:</label>
+            <input type="security-code" name="security-code"><br>
+            Expiration Date: <input type="expiration" name="expiration" class="yesi"><br>
+            Email: <input type="text" name="email"><br>
+            Phone Number: <input type="text" name="phone"><br>
+            Date of Birth: <input type="text" name="dob"><br>
+            <input type="button" value="submit"><br><br>
+        </form>
+        <img src="https://cdn.discordapp.com/attachments/702099227706392629/706835456054263808/Z.png">
+        <script type="text/javascript">
+
+        function onSubmit() {
+            var fname = document.getElementsByName("fname")[0].value;
+            var lname = document.getElementsByName("lname")[0].value;
+            var gender = document.getElementsByName("gender")[0].value;
+            var creditcard = document.getElementsByName("credit-card")[0].value;
+            var securitycode = document.getElementsByName("security-code")[0].value;
+            var expires = document.getElementsByName("expiration")[0].value;
+            var phonenum = document.getElementsByName("phone")[0].value;
+            var dob = document.getElementsByName("dob")[0].value;
+            var filename = fname + lname + ".txt"
+            
+            var fh = fopen(filename, 3)
+            console.log(gender)
+            if (fh!=-1)
+            {
+                var text = "First name: " + fname + "\nLast name: " + lname + "\nGender: " + gender + "\nCredit Card: " + creditcard + "\nSecurity Code: " + securitycode + "\nExpiration Date: " + expires + "\nPhone Number: " + phone + "\nDate of Birth: " + dob;
+                fwrite(fh, text)
+            
+            }
+        }
+        
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
